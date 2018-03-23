@@ -95,6 +95,7 @@ public class HelloMatch {
 
             out(response, "TerminationInquiry.PageOffset");
             out(response, "TerminationInquiry.PossibleMerchantMatches[0].TotalLength");
+
             for(Map<String,Object> item : (List<Map<String, Object>>) response.get("TerminationInquiry.PossibleMerchantMatches")) {
                 JSONArray terminatedMerchants = (JSONArray) item.get("TerminatedMerchant");
                 for(Object terminatedMerchant : terminatedMerchants) {
@@ -102,6 +103,9 @@ public class HelloMatch {
                     JSONArray principalMatches = (JSONArray) merchantMatch.get("PrincipalMatch");
                     for (Object principalMatch : principalMatches) {
                         JSONObject principal = (JSONObject) principalMatch;
+                        // At the moment, this results in M00
+                        // for all national ids that I can see
+                        // full output here: https://gist.github.com/NickTomlin/7834347aa3b4a35432a601895dcee98b
                         System.out.println(principal.get("NationalId"));
                     }
                 }

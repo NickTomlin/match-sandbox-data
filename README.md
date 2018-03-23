@@ -1,7 +1,7 @@
 match-sandbox-data
 ---
 
-This is a repo to help troubleshoot some issues I am having with the MasterCard match [sandbox data](https://developer.mastercard.com/documentation/match/#sandbox-data). Namely, I _think_ I am sending the right test data to receive a terminated principal match but I am not receiving one in the response.
+This is a repo to help troubleshoot some issues I am having with the MasterCard match [sandbox data](https://developer.mastercard.com/documentation/match/#sandbox-data). Namely, I _think_ I am sending the right test data to receive a terminated principal match but I am not receiving one in the [response](https://gist.github.com/NickTomlin/7834347aa3b4a35432a601895dcee98b).
 
 Setup
 ---
